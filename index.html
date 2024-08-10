@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBank</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/bank.png" type="image/x-icon" />
+
+    <!-- Tailwind and DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- This is Main Section -->
+    <main>
+      <section class="lg:ml-40 lg:mr-40 lg:mx-auto py-14">
+        <h1 class="text-center font-bold text-7xl">
+          <span class="text-amber-500">My</span
+          ><span class="text-green-600">Bank</span>
+        </h1>
+
+        <!-- Login Field -->
+        <div class="mt-10 bg-teal-300 px-16 py-12 rounded-lg">
+          <h1 class="text-4xl font-bold mb-3">Please Login</h1>
+          <input
+            id="email-field"
+            type="email"
+            placeholder="test@afsar.com"
+            class="rounded input input-bordered input-warning w-full"
+          />
+          <br />
+          <!-- <br /> -->
+          <input
+            id="password-field"
+            type="password"
+            placeholder="test"
+            class="mt-2 rounded input input-bordered input-warning w-full"
+          />
+          <br />
+          <button
+            id="login"
+            class="btn rounded mt-4 px-10 text-xl bg-green-700 border-2 text-white border-green-700 hover:bg-transparent hover:border-2 hover:border-green-700 hover:text-green-700"
+          >
+            Login
+          </button>
+
+          <!-- Modal  -->
+          <!-- onclick="my_modal_1.showModal() -->
+          <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-xl text-red-700 font-bold">WARNING</h3>
+              <p class="py-4 text-red-700">Email or Password incorrect!</p>
+              <p class="text-green-600">Please try again.</p>
+            </div>
+          </dialog>
+          <!-- End of Modal  -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
